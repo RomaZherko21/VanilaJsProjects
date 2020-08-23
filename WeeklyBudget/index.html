@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 class="appTitle">My Weekly Budget</h1>
+    <div class="weeklyBudgetAmmount">
+        <input type="text" class="mainInput" placeholder="Enter a Weekly Budget Ammount">
+        <button>Enter</button>
+    </div>
+    <main class="mainApp">
+        <div class="mainForm mainChild">
+            <h2 class="mainTitle">Add your daily expences:</h2>
+            <form onsubmit="return false;">
+                <label for="name" class="mainLabel">Name:</label>
+                <input type="text" id="name" class="mainInput" placeholder="Ex: Groceries">
+                <label for="ammount" class="mainLabel amountLabel">Price:</label>
+                <input type="text" id="ammount" class="mainInput" placeholder="Ex: 230">
+                <button id="addBtn" class="mainBtn">Add</button>
+            </form>
+            <h2 id="errorMessage" class="mainTitle error"></h2>
+        </div>
+        <div class="mainInfo mainChild">
+            <div class="budget">
+                <h2 class="mainTitle">Budget: <span id="budget"></span> </h2>
+            </div>
+            <div class="balance">
+                <h2 class="mainTitle">Left: <span id="balance"></span> </h2>
+            </div>
+            <div class="error" style="display: none; color: yellow;"></div>
+            <div class="mainExpenses">
+                <h2 class="mainTitle">My expenses:</h2>
+                <ul class="currentExpenses">
+                
+                </ul>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

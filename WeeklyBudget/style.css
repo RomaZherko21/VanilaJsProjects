@@ -1,0 +1,154 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo Tamma 2", cursive;
+}
+
+body {
+  background: linear-gradient(45deg, #eecfba, #c5dde8);
+  text-align: center;
+  height: 100vh;
+}
+
+.mainTitle {
+  margin: 12px;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.appTitle {
+  margin-top: 30px;
+  color: white;
+}
+
+.weeklyBudgetAmmount {
+  width: 50vw;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.weeklyBudgetAmmount input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 90%;
+  height: 34px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.weeklyBudgetAmmount button {
+  padding: 5px 20px;
+  margin: 5px auto 0px;
+  display: block;
+  font-weight: 400;
+  border: none;
+  border-radius: 4px;
+  background-color: #afafaf;
+  cursor: pointer;
+}
+
+.weeklyBudgetAmmount button:hover {
+  background-color: #ccc;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.mainApp {
+  padding: 10px 0;
+  width: 50vw;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin-top: 30px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+}
+
+.mainApp .mainForm {
+  margin: 12px;
+}
+
+.mainApp .mainForm form .mainLabel {
+  margin: 5px 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.mainApp .mainForm form .amountLabel {
+  display: block;
+  margin: 20px 10px 0px;
+}
+
+.mainApp .mainForm form .mainInput {
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 20px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+
+.mainApp .mainForm form .mainBtn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #afafaf;
+}
+
+.mainApp .mainForm form .mainBtn:hover {
+  background-color: #ccc;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.mainApp .mainInfo .budget {
+  width: 95%;
+  background-color: lightskyblue;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mainApp .mainInfo .balance {
+  width: 95%;
+  background-color: #45f16a;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mainApp .mainInfo .mainExpenses .currentExpenses li {
+  list-style-position: inside;
+  margin-left: 14px;
+}
+
+@media (max-width: 1024px) {
+  .mainApp {
+    width: 90vw;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .weeklyBudgetAmmount {
+    width: 90vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -9,5 +9,6 @@ function converter(value, measure) {
     if (measure == "kg") output.innerHTML = `${(value * 2.2).toFixed(2)} pounds`;
     if (measure == "pounds")
     output.innerHTML = `${(value / 2.2).toFixed(2)} killogramms`;
-    if (typeof value == "string") output.innerHTML = `Need a number!`;
+    console.log()
+    if (isNaN(+value)) output.innerHTML = `Need a number!`;
 }

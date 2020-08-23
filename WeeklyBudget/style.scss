@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo Tamma 2", cursive;
+}
+
+$mainColor: rgb(31, 30, 30);
+$mainSpace: 30px;
+$childSpace: 12px;
+$formSpace: 5px;
+
+body {
+  background: linear-gradient(45deg, #eecfba, #c5dde8);
+  text-align: center;
+  height: 100vh;
+}
+
+.mainTitle {
+  margin: $childSpace;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.appTitle {
+  margin-top: $mainSpace;
+  color: white;
+}
+.weeklyBudgetAmmount {
+  width: 50vw;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 10px;
+  input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 90%;
+    height: 34px;
+    padding-left: 10px;
+    font-size: 20px;
+  }
+  button {
+    padding: 5px 20px;
+    margin: 5px auto 0px;
+    display: block;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(175, 175, 175);
+    cursor: pointer;
+    &:hover {
+      background-color: #ccc;
+      transition: all 0.5s ease;
+    }
+  }
+}
+.mainApp {
+  padding: 10px 0;
+  width: 50vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  //   justify-content: center;
+  margin-top: $mainSpace;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+
+  .mainForm {
+    margin: $childSpace;
+    form {
+      .mainLabel {
+        margin: $formSpace 10px;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .amountLabel {
+        display: block;
+        margin: 20px 10px 0px;
+      }
+      .mainInput {
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 20px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        display: block;
+        width: 100%;
+      }
+      .mainBtn {
+        margin-top: 1rem;
+        display: inline-block;
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        background-color: rgb(175, 175, 175);
+        &:hover {
+          background-color: #ccc;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+  .mainInfo {
+    .budget {
+      width: 95%;
+      background-color: lightskyblue;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .balance {
+      width: 95%;
+      background-color: rgb(69, 241, 106);
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .mainExpenses {
+      .currentExpenses{
+        li{
+          list-style-position:inside;
+          margin-left: 14px;
+        }
+
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .mainApp {
+    width: 90vw;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .weeklyBudgetAmmount {
+    width: 90vw;
+  }
+}
