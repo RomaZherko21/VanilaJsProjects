@@ -1,0 +1,117 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Libre Caslon Display", serif;
+}
+
+body {
+  height: 100vh;
+  background: #edf0f1;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #fffb00;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -webkit-box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+          box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+}
+
+header .inputToDo {
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+  height: 50px;
+  border: none;
+  font-size: 20px;
+  padding: 0 20px;
+  background-color: #fffead;
+}
+
+header .addBtn {
+  width: 50px;
+  position: relative;
+  right: 20px;
+  height: 50px;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+  border-radius: 100px;
+  background-color: white;
+}
+
+header .addBtn:hover .plusIcon {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+header .addBtn .plusIcon {
+  font-size: 24px;
+  color: #fffb00;
+}
+
+.allToDo {
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+}
+
+.allToDo .toDoList .toDoTask {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  padding: 14px;
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #444;
+  line-height: 22px;
+  background: #fff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.allToDo .toDoList .toDoTask h1 {
+  overflow: hidden;
+}
+
+.allToDo .toDoList .toDoTask .listIcons i:hover {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+  color: #fffb00;
+}
+
+.allToDo .toDoList .toDoTask .listIcons .fa-check {
+  padding-right: 10px;
+}
+
+.allToDo .toDoList .toDoTask .listIcons .fa-trash {
+  border-left: 1px solid gray;
+  padding-left: 10px;
+}
+
+.allToDo .toDoList .toDoTask .listIcons .fa-trash:hover {
+  color: #d60909;
+}
+/*# sourceMappingURL=style.css.map */
