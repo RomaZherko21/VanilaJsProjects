@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Speed Typing Test</h1>
+    </header>
+    <main>
+        <h2 id="word" class="word">start</h2>
+        <div class="difficulty">
+            <label for="difficulty">Difficulty:</label>
+            <select class="selectDifficulty" id="difficulty">
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+            <button id="start" class="startBtn">start</button>
+        </div>
+        <input type="text" id="wordInput" class="wordInput">
+        <div class="score">
+            <span class="timeCounter" >Time left: <span id="timeCounter">0</span></span>
+            <span  class="scoreCounter">Score: <span id="scoreCounter">0</span> </span>
+        </div>
+        <div class="instructions">
+            <h3>Instructions</h3>
+            <p>Type each word in the given amount of time to score. To play again, just type the current word. Your
+                score will reset.</p>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

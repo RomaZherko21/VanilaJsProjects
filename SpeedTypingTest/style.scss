@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Alata", sans-serif;
+}
+
+$mainSpace: 30px;
+$littleSpace: 20px;
+$dangerColor: rgb(23, 162, 184);
+
+body {
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+header {
+  background-color: $dangerColor;
+  padding: $mainSpace 0px;
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+main {
+  padding: $mainSpace;
+  background-color: rgb(52, 58, 64);
+  .word {
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: rgb(238, 215, 8);
+  }
+  .difficulty {
+    margin: $littleSpace;
+    .selectDifficulty {
+      margin-left: 10px;
+
+      background-color: $dangerColor;
+      color: white;
+      padding: 3px;
+      width: 100px;
+      border: none;
+      font-size: 14px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+      -webkit-appearance: button;
+      appearance: button;
+      outline: none;
+    }
+    .startBtn {
+      margin-left: 10px;
+      width: 80px;
+      background-color: $dangerColor;
+      color: white;
+      padding: 3px 6px;
+      border: none;
+      font-size: 14px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+      -webkit-appearance: button;
+      appearance: button;
+      outline: none;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+  }
+  .wordInput {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    border: 1px solid #ced4da;
+    width: 250px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .score {
+    margin: $littleSpace 0 $mainSpace + 20px;
+    .timeCounter {
+      margin-right: 8px;
+    }
+  }
+
+  .instructions {
+    background-color: rgb(108, 117, 125);
+    width: 250px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: $mainSpace;
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    .difficulty {
+      display: grid;
+      grid-row: repeate(3,1fr);
+      justify-content: center;
+      .selectDifficulty{
+        margin: 10px;
+      }
+    }
+
+  }
+}

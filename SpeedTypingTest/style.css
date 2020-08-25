@@ -1,0 +1,115 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Alata", sans-serif;
+}
+
+body {
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+header {
+  background-color: #17a2b8;
+  padding: 30px 0px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+main {
+  padding: 30px;
+  background-color: #343a40;
+}
+
+main .word {
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: #eed708;
+}
+
+main .difficulty {
+  margin: 20px;
+}
+
+main .difficulty .selectDifficulty {
+  margin-left: 10px;
+  background-color: #17a2b8;
+  color: white;
+  padding: 3px;
+  width: 100px;
+  border: none;
+  font-size: 14px;
+  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  -moz-appearance: button;
+       appearance: button;
+  outline: none;
+}
+
+main .difficulty .startBtn {
+  margin-left: 10px;
+  width: 80px;
+  background-color: #17a2b8;
+  color: white;
+  padding: 3px 6px;
+  border: none;
+  font-size: 14px;
+  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  -moz-appearance: button;
+       appearance: button;
+  outline: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+main .wordInput {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  border: 1px solid #ced4da;
+  width: 250px;
+}
+
+main .wordInput:focus {
+  outline: none;
+}
+
+main .score {
+  margin: 20px 0 50px;
+}
+
+main .score .timeCounter {
+  margin-right: 8px;
+}
+
+main .instructions {
+  background-color: #6c757d;
+  width: 250px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 900px) {
+  main .difficulty {
+    display: -ms-grid;
+    display: grid;
+    grid-row: repeate(3, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .difficulty .selectDifficulty {
+    margin: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
