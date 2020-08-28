@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Alata", sans-serif;
+}
+
+$mainSpace: 30px;
+$littleSpace: 15px;
+
+body {
+  background: rgba(0, 0, 0, 0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  margin-top: $mainSpace;
+  padding: $littleSpace;
+  width: 320px;
+  background: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 1px 2px 4px #9e9e9e;
+  .title {
+    font-weight: 400;
+    margin: $littleSpace 0;
+    text-align: center;
+    font-size: 1.75rem;
+  }
+  .mainForm {
+    .InputGenerate {
+      height: 42px;
+      outline: none;
+      font-size: 16px;
+      position: relative;
+      .generatedPassword {
+        width: 100%;
+        padding: 10px 8px;
+        font-size: 17px;
+        font-weight: 300;
+        color: #555;
+        background-color: #dedede;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        outline: none;
+      }
+      .copyPassword {
+        position: absolute;
+        padding: 7px 10px;
+        background: #464646;
+        color: white;
+        top: 6px;
+        right: 7px;
+        cursor: pointer;
+        border-radius: 25px;
+        border: none;
+        outline:none;
+        &:hover{
+          transition: all .2s ease;
+          background-color: rgb(209, 31, 31);
+        }
+      }
+    }
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      align-items: center;
+    }
+    .passwordLength {
+      width: 80px;
+      outline: none;
+      padding: 4px 8px;
+      font-size: 15px;
+      color: #555;
+      background-color: #dedede;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+    }
+    .generatePassword {
+      width: 100%;
+      padding: 8px;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      background: linear-gradient(45deg, #009688, #3f51b5);
+      border: none;
+      color: white;
+      border-radius: 25px;
+      margin-top: 1rem;
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        background: linear-gradient(220deg, #009688, #3f51b5);
+      }
+    }
+    .wrongLength{
+      color: rgb(197, 21, 21);
+      text-align: center;
+      font-size: 14px;
+      margin: 5px 0;
+      // display: none;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <h1 class="title">Password Generator</h1>
+        <form class="mainForm" onsubmit="return false;">
+            <div class="InputGenerate">
+                <input type="text" id="generatedPassword" class="generatedPassword">
+                <button class="copyPassword" id="copyPassword">Copy</button>
+            </div>
+            <div class="form-row">
+                <label for="passwordLength">Password Length</label>
+                <input type="text" id="passwordLength" class="passwordLength" type="number" min="5" max="25">
+            </div>
+            <div class="form-row">
+                <label for="uppercase">Include Uppercase Letters</label>
+                <input type="checkbox" id="uppercase" checked="" disabled="">
+            </div>
+            <div class="form-row">
+                <label for="uppercase">Include Lowercase Letters</label>
+                <input type="checkbox" id="lowercase" checked="" disabled="">
+            </div>
+            <div class="form-row">
+                <label for="numbersInclude">Include Numbers</label>
+                <input type="checkbox" id="numbersInclude" checked="">
+            </div>
+            <div class="form-row">
+                <label for="specialSymbols">Include Special Characters</label>
+                <input type="checkbox" id="specialSymbols" checked="">
+            </div>
+            <button class="generatePassword" id="generatePassword">Generate Password</button>
+            <div class="wrongLength" style="display: none;">Select a length between 5 and 25</div>
+        </form>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

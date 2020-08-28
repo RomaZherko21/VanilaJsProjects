@@ -1,0 +1,125 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Alata", sans-serif;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  margin-top: 30px;
+  padding: 15px;
+  width: 320px;
+  background: #f1f1f1;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 2px 4px #9e9e9e;
+          box-shadow: 1px 2px 4px #9e9e9e;
+}
+
+main .title {
+  font-weight: 400;
+  margin: 15px 0;
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+main .mainForm .InputGenerate {
+  height: 42px;
+  outline: none;
+  font-size: 16px;
+  position: relative;
+}
+
+main .mainForm .InputGenerate .generatedPassword {
+  width: 100%;
+  padding: 10px 8px;
+  font-size: 17px;
+  font-weight: 300;
+  color: #555;
+  background-color: #dedede;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+}
+
+main .mainForm .InputGenerate .copyPassword {
+  position: absolute;
+  padding: 7px 10px;
+  background: #464646;
+  color: white;
+  top: 6px;
+  right: 7px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+main .mainForm .InputGenerate .copyPassword:hover {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  background-color: #d11f1f;
+}
+
+main .mainForm .form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .mainForm .passwordLength {
+  width: 80px;
+  outline: none;
+  padding: 4px 8px;
+  font-size: 15px;
+  color: #555;
+  background-color: #dedede;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+}
+
+main .mainForm .generatePassword {
+  width: 100%;
+  padding: 8px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #009688, #3f51b5);
+  border: none;
+  color: white;
+  border-radius: 25px;
+  margin-top: 1rem;
+  outline: none;
+  cursor: pointer;
+}
+
+main .mainForm .generatePassword:hover {
+  background: linear-gradient(220deg, #009688, #3f51b5);
+}
+
+main .mainForm .wrongLength {
+  color: #c51515;
+  text-align: center;
+  font-size: 14px;
+  margin: 5px 0;
+}
+/*# sourceMappingURL=style.css.map */
