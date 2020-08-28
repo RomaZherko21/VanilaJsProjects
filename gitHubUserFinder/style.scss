@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Alata", sans-serif;
+}
+
+$mainSpace: 30px;
+$littleSpace: 15px;
+
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+
+header {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // min-height: 30vh;
+  padding: 20px;
+  font-size: 1.5rem;
+  background-color: #222222;
+  i {
+    position: relative;
+    top: 10px;
+    font-size: 50px;
+    margin-right: 10px;
+  }
+}
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight: 700;
+  }
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary, $secondary);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field {
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
+.showUser {
+  padding: $littleSpace;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  background: rgb(238, 238, 238);
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px lightgrey;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: $littleSpace;
+  .userPhoto {
+    img {
+      border-radius: 50%;
+      width: 200px;
+    }
+  }
+  .userInfo {
+    margin-left: 2rem;
+    ul {
+      li {
+        list-style-type: none;
+        margin-top: 10px;
+      }
+    }
+  }
+}
