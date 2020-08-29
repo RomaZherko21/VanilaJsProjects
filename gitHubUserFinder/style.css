@@ -111,24 +111,24 @@ header i {
 
 .showUser {
   padding: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: #eeeeee;
   border-radius: 5px;
   -webkit-box-shadow: 1px 1px 2px lightgrey;
           box-shadow: 1px 1px 2px lightgrey;
-  width: 50%;
+  margin: 15px auto;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showUser .userPhoto {
   margin: 0 auto;
-  margin-top: 15px;
 }
 
 .showUser .userPhoto img {
   border-radius: 50%;
-  width: 200px;
+  width: 225px;
 }
 
 .showUser .userInfo {

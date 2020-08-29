@@ -2,20 +2,17 @@ const userName = document.querySelector("#userName");
 const userSection = document.querySelector("#showUser");
 
 function changeInfo(data) {
+  userSection.style.display = "block";
 
-userSection.style.display = "block";
-
-  let name = document.querySelector("#name");
-  let bio = document.querySelector("#bio");
-  let location = document.querySelector("#location");
-  let company = document.querySelector("#workPlace");
   let img = document.querySelector(".userPhoto");
+  let userInfo = document.querySelector("#userInfo");
 
-  name.innerHTML = data.login;
+  userInfo.innerHTML = `<li>Name: ${data.name}</li>
+  <li>Bio: ${data.bio}</li>
+  <li>Location: ${data.location}</li>
+  <li>Company: ${data.company}</li>`;
+
   img.innerHTML = `<img src="${data.avatar_url}">`;
-  bio.innerHTML = data.bio;
-  location.innerHTML = data.location;
-  company.innerHTML = data.company;
 }
 
 class GitHub {
@@ -39,6 +36,7 @@ let user = new GitHub();
 
 userName.addEventListener("keyup", (event) => {
   currentUser = user.getUser(event.target.value);
+  console.log(currentUser);
 
   if (currentUser) {
     currentUser.then((data) => {

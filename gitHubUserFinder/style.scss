@@ -95,19 +95,19 @@ header {
 
 .showUser {
   padding: $littleSpace;
-  display: flex;
-  // justify-content: center;
-  align-items: center;
   background: rgb(238, 238, 238);
   border-radius: 5px;
   box-shadow: 1px 1px 2px lightgrey;
-  width: 50%;
-  margin: 0 auto;
-  margin-top: $littleSpace;
+  margin: $littleSpace auto;
+  width: 300px;
+
+  display: flex;
+  
   .userPhoto {
+    margin: 0 auto;
     img {
       border-radius: 50%;
-      width: 200px;
+      width: 225px;
     }
   }
   .userInfo {
