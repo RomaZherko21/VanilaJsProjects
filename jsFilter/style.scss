@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+$mainSpace: 30px;
+$littleSpace: 15px;
+
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+
+main {
+  padding: $littleSpace;
+  margin: $mainSpace auto;
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  .searchInput {
+    margin-top: $mainSpace;
+    border: none;
+    border-bottom: 2px solid $gray;
+    border-radius: 0;
+    outline: none;
+    height: 2rem;
+    width: 100%;
+    font-size: 16px;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all .3s ease;
+    font-weight: 500;
+    &:hover{
+      border-bottom: 2px solid $primary;
+    }
+  }
+  .topicsList{
+    margin-top: $littleSpace;
+    li{
+      list-style-type: none;
+    }
+    .letter{
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-align-last: left;
+      padding: $littleSpace;
+      border: 1px solid $gray;
+      width: 100%;
+      margin-top: 7px;
+
+    }
+    .word{
+      font-size: 1.2rem;
+      font-weight: 400;
+      text-align-last: left;
+      padding: 10px;
+      padding-left: $mainSpace;
+      border: 1px solid $gray;
+      width: 100%;
+      color: $primary;
+      margin-top: 3px;
+    }
+
+  }
+}

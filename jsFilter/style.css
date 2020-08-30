@@ -1,0 +1,72 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  padding: 15px;
+  margin: 30px auto;
+}
+
+main h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+main .searchInput {
+  margin-top: 30px;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  border-radius: 0;
+  outline: none;
+  height: 2rem;
+  width: 100%;
+  font-size: 16px;
+  padding: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  font-weight: 500;
+}
+
+main .searchInput:hover {
+  border-bottom: 2px solid #11998e;
+}
+
+main .topicsList {
+  margin-top: 15px;
+}
+
+main .topicsList li {
+  list-style-type: none;
+}
+
+main .topicsList .letter {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align-last: left;
+  padding: 15px;
+  border: 1px solid #9b9b9b;
+  width: 100%;
+  margin-top: 7px;
+}
+
+main .topicsList .word {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align-last: left;
+  padding: 10px;
+  padding-left: 30px;
+  border: 1px solid #9b9b9b;
+  width: 100%;
+  color: #11998e;
+  margin-top: 3px;
+}
+/*# sourceMappingURL=style.css.map */
