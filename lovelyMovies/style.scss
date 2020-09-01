@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  transition: all 0.3s ease;
+}
+
+$spaceXL: 30px;
+$spaceL: 20px;
+$spaceM: 15px;
+$spaceS: 10px;
+$spaceXS: 5px;
+
+$primary: rgb(49, 48, 48);
+$secondary: rgb(228, 174, 33);
+$danger: rgb(2, 2, 2);
+$creative: rgb(144, 144, 145);
+$cloudy: white;
+
+body {
+  color: $creative;
+}
+
+h1,
+h2 {
+  color: $cloudy;
+}
+h2 {
+  font-size: 1.2rem;
+}
+
+header {
+  // padding: $spaceL $spaceM;
+  padding-left: $spaceM;
+  height: 80px;
+  background-color: $danger;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .searchForm {
+    margin: 0 auto;
+    font-size: 14px;
+    color: $creative;
+    position: relative;
+    .searchInMovies {
+      color: $creative;
+      background: $primary;
+      min-width: 240px;
+      padding: 0.5rem 1.3rem;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+    .fa-times {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      &:hover {
+        transition: all 0.3s ease;
+        color: $secondary;
+      }
+    }
+  }
+}
+
+main {
+  background-color: $primary;
+  height: auto;
+  width: 100%;
+  color: $cloudy;
+  .searchResult {
+    padding: $spaceM;
+    span {
+      color: $secondary;
+    }
+  }
+  .moviesList {
+    padding: $spaceM;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $spaceS;
+    grid-row-gap: $spaceXL;
+    min-height: 100vh;
+    .movie {
+      // width: auto;
+      img {
+        width: 100%;
+        height: 350px;
+        border-radius: 9px;
+      }
+      h2 {
+        font-weight: 400;
+      }
+      p {
+        font-weight: 300;
+        color: $creative;
+      }
+      &:hover {
+        transition: all 0.3s ease;
+        transform: translateY(-5px);
+        cursor: pointer;
+      }
+    }
+    .movieInfo {
+      display: none;
+      position: fixed;
+      width: 40%;
+      right: 0;
+      top: 0;
+      overflow: auto;
+      height: 100%;
+      .showImg {
+        background-color: $primary;
+        text-align: center;
+        .fa-times {
+          position: absolute;
+          top: 12px;
+          left: 12px;
+          font-size: 22px;
+          &:hover {
+            color: $secondary;
+            cursor: pointer;
+          }
+        }
+        img {
+          width: 270px;
+          border-radius: 8px;
+          height: 100%;
+        }
+      }
+      .showText {
+        background-color: $danger;
+        padding: $spaceXL;
+        h2 {
+          font-size: 1.5rem;
+          font-weight: 400;
+          display: inline;
+        }
+        .rate {
+          padding: $spaceXS;
+          color: $secondary;
+          background-color: $primary;
+          border-radius: 8px;
+          margin-left: 12px;
+        }
+        p {
+          font-weight: 300;
+          color: $creative;
+          margin-top: $spaceS;
+        }
+        span {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1072px) {
+  main {
+    .moviesList {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  main{
+    .moviesList{
+      .movieInfo{
+        width: 55%;
+      }
+    }
+  }
+}
+
+@media (max-width: 662px) {
+  main {
+    .moviesList {
+      grid-template-columns: repeat(2, 1fr);
+      .movieInfo{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    .moviesList {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
