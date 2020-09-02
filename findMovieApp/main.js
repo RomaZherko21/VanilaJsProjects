@@ -46,15 +46,15 @@ function getSingleMovie(id) {
   });
 }
 
-function allMovies(value) {
-  getMovies(value, 1).then(({ movies = [], totalResult = 0 }) => {
+function allMovies(value, page) {
+  getMovies(value, page).then(({ movies = [], totalResult = 0 }) => {
     moviesList.innerHTML = "";
     movies.map(renderMovies);
   });
 }
 
-window.onload= ()=>{
-    allMovies('Harry Potter')
+window.onload = () => {
+  allMovies("Harry Potter", 1);
 };
 
 const movieInfo = document.querySelector("#movieInfo");
@@ -72,15 +72,33 @@ clearInput.addEventListener("click", () => {
   moviesList.innerHTML = "";
 });
 
+const prevPage = document.querySelector("#prevPage");
+const nextPage = document.querySelector("#nextPage");
+let pageNum = 1;
+prevPage.addEventListener("click", () => {
+  if (pageNum > 1) allMovies(result.textContent, --pageNum);
+  page.innerHTML = pageNum;
+});
+
+nextPage.addEventListener("click", () => {
+  allMovies(result.textContent, ++pageNum);
+  page.innerHTML = pageNum;
+});
+
 search.addEventListener("input", (event) => {
   result.textContent = `${event.target.value}`;
-  allMovies(event.target.value);
+  pageNum = 1;
+  page.innerHTML = pageNum;
+  allMovies(event.target.value, pageNum);
 });
 
 function renderMovies(item) {
   let div = document.createElement("div");
   div.className = "movie";
-
+  console.log();
+  if (item.Poster == "N/A")
+    item.Poster =
+      "https://in.bmscdn.com/iedb/movies/images/website/poster/large/kuber--marathi--et00015314-24-03-2017-18-37-59.jpg";
   moviesList.innerHTML += `<div class="movie" show-id = ${item.imdbID}>
     <img src=${item.Poster}
         alt="">
@@ -99,11 +117,14 @@ moviesList.addEventListener("click", (event) => {
         showFullInfo(movieObj);
       }
     );
-    movieInfo.style.display = "block";
+    // movieInfo.style.display = "block";
   }
 });
 
 function showFullInfo(item) {
+  console.log(moviesList.querySelector('.movieInfo'))
+  console.log(Boolean(moviesList.querySelector('.movieInfo')))
+if(moviesList.querySelector('.movieInfo')) moviesList.querySelector('.movieInfo').remove();
   let div = document.createElement("div");
   div.className = "movieInfo";
   div.style.display = "block";
@@ -111,6 +132,10 @@ function showFullInfo(item) {
   let i = document.createElement("i");
   i.className = "fas fa-times";
   i.id = "closeInfo";
+
+  if (item.Poster == "N/A")
+  item.Poster =
+    "https://in.bmscdn.com/iedb/movies/images/website/poster/large/kuber--marathi--et00015314-24-03-2017-18-37-59.jpg";
 
   let showImg = document.createElement("div");
   showImg.className = "showImg";

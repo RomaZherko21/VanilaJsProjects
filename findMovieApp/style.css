@@ -88,8 +88,8 @@ main .moviesList {
   padding: 15px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
   grid-gap: 10px;
   grid-row-gap: 30px;
   min-height: 100vh;
@@ -178,6 +178,21 @@ main .moviesList .movieInfo .showText p {
 
 main .moviesList .movieInfo .showText span {
   font-weight: 500;
+}
+
+main .pageBtn {
+  text-align: center;
+  padding: 30px;
+}
+
+main .pageBtn i {
+  font-size: 25px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+main .pageBtn i:hover {
+  color: #e4ae21;
 }
 
 @media (max-width: 1072px) {

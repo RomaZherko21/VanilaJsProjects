@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f40adf1036.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Lovely Movies</h1>
+        <div class="searchForm">
+            <input type="text" class="searchInMovies" id="searchInMovies" placeholder="Search in movies...">
+            <i class="fas fa-times" id="clearInput"></i>
+        </div>
+    </header>
+
+    <main>
+        <div class="searchResult">
+            <h2>Result for <span id="result">Harry Potter</span> | Page: <span id="page">1</span></h2>
+        </div>
+        <div class="moviesList" id="moviesList">
+        </div>
+        <div class="pageBtn">
+            <i id="prevPage" class="fas fa-arrow-left"></i>
+            <i id="nextPage" class="fas fa-arrow-right"></i>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

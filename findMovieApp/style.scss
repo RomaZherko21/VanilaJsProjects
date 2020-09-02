@@ -83,7 +83,7 @@ main {
   .moviesList {
     padding: $spaceM;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: $spaceS;
     grid-row-gap: $spaceXL;
     min-height: 100vh;
@@ -159,6 +159,20 @@ main {
         }
       }
     }
+  }
+  .pageBtn{
+    text-align: center;
+    padding: $spaceXL;
+    
+i{
+  font-size: 25px;
+  margin-left: $spaceM;
+  cursor: pointer;
+  &:hover{
+    color: $secondary;
+  }
+}
+    
   }
 }
 
