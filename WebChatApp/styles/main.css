@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.icon {
+  padding: 4px;
+  cursor: pointer;
+}
+
+.icon i {
+  color: #3ad07a;
+  font-size: 20px;
+}
+
+.icon:hover {
+  border-radius: 6px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: rgba(225, 225, 225, 0.678);
+}
+
+body {
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+}
+
+.sidebar header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 10px;
+  border-bottom: 1px solid #efefef;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.sidebar header .logo {
+  display: inline-block;
+}
+
+.sidebar header .logo i {
+  color: rgba(97, 97, 97, 0.678);
+  font-size: 25px;
+}
+
+.sidebar header .logo h3 {
+  margin-left: 10px;
+  font-weight: 700;
+  color: rgba(97, 97, 97, 0.678);
+  display: inline-block;
+}
+
+.sidebar .currentUserInfo {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.sidebar .currentUserInfo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid #3ad07a;
+}
+
+.sidebar .currentUserInfo h2 {
+  font-size: 0.9rem;
+}
+
+.sidebar .currentUserInfo p {
+  color: rgba(97, 97, 97, 0.678);
+  font-size: 0.8rem;
+}
+
+.sidebar .currentUserInfo .currentUserSettings {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar .currentUserInfo .currentUserSettings .icon {
+  margin-left: 6px;
+}
+
+.sidebar .findChatUser {
+  width: 100%;
+  padding: 0 7px;
+  position: relative;
+  margin: 5px 0;
+}
+
+.sidebar .findChatUser input {
+  border: 1px solid #e0e0e0;
+  background-color: rgba(225, 225, 225, 0.678);
+  height: 36px;
+  border-radius: 25px;
+  width: 100%;
+  outline: none;
+  padding: 0.2em 1em;
+  color: rgba(97, 97, 97, 0.678);
+}
+
+.sidebar .findChatUser input:focus {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 1px solid #3ad07a;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+}
+
+.sidebar .findChatUser i {
+  color: rgba(97, 97, 97, 0.678);
+  position: absolute;
+  right: 18px;
+  top: 32%;
+  cursor: pointer;
+}
+
+.sidebar .findChatUser i:hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: rgba(46, 46, 46, 0.678);
+}
+
+.sidebar .allChatFriend {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sidebar .allChatFriend .chatFriend {
+  padding: 15px 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60px auto auto;
+      grid-template-columns: 60px auto auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar .allChatFriend .chatFriend .friendPhoto {
+  position: relative;
+  width: 60px;
+}
+
+.sidebar .allChatFriend .chatFriend .friendPhoto img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.sidebar .allChatFriend .chatFriend .friendPhoto .online {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #3ad07a;
+  border: 2px solid white;
+  bottom: 3px;
+  right: 3px;
+}
+
+.sidebar .allChatFriend .chatFriend .chatFriendName {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.sidebar .allChatFriend .chatFriend .chatFriendName h2 {
+  font-size: 0.9rem;
+}
+
+.sidebar .allChatFriend .chatFriend .chatFriendName p {
+  color: rgba(97, 97, 97, 0.678);
+  font-size: 0.8rem;
+}
+
+.sidebar .allChatFriend .chatFriend .unreadMessages {
+  text-align: right;
+}
+
+.sidebar .allChatFriend .chatFriend .unreadMessages .messagesCount {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3px 4px;
+  border-radius: 50%;
+  background-color: #3ad07a;
+  font-size: 12px;
+  color: white;
+}
+
+.sidebar .allChatFriend .chatFriend .unreadMessages .time {
+  font-size: 0.6rem;
+  color: rgba(97, 97, 97, 0.678);
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    width: 100vw;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+$spaceXL: 30px;
+$spaceL: 20px;
+$spaceM: 15px;
+$spaceS: 10px;
+$spaceXS: 5px;
+
+$primary: rgb(58, 208, 122);
+$secondary: rgba(97, 97, 97, 0.678);
+$danger: black;
+
+.icon {
+  padding: 4px;
+  cursor: pointer;
+
+  i {
+    color: $primary;
+    font-size: 20px;
+  }
+  &:hover {
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: lighten($secondary, 50%);
+  }
+}
+body {
+  overflow: hidden;
+}
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: $spaceL $spaceS;
+    border-bottom: 1px solid #efefef;
+    align-content: center;
+    .logo {
+      display: inline-block;
+      i {
+        color: $secondary;
+        font-size: 25px;
+      }
+      h3 {
+        margin-left: $spaceS;
+        font-weight: 700;
+        color: $secondary;
+        display: inline-block;
+      }
+    }
+  }
+  .currentUserInfo {
+    text-align: center;
+    margin: 0 auto;
+    padding: $spaceL;
+    img {
+        object-fit: cover;
+      width: 70px;
+      border-radius: 50%;
+      border: 2px solid $primary;
+    }
+    h2 {
+      font-size: 0.9rem;
+    }
+    p {
+      color: $secondary;
+      font-size: 0.8rem;
+    }
+    .currentUserSettings {
+      margin-top: $spaceS;
+      display: flex;
+      justify-content: center;
+      .icon {
+        margin-left: 6px;
+      }
+    }
+  }
+  .findChatUser {
+    width: 100%;
+    padding: 0 7px;
+    position: relative;
+    margin: 5px 0;
+    input {
+      border: 1px solid #e0e0e0;
+      background-color: lighten($secondary, 50%);
+      height: 36px;
+      border-radius: 25px;
+      width: 100%;
+      outline: none;
+      padding: 0.2em 1em;
+      color: $secondary;
+      &:focus {
+        transition: all 0.3s ease;
+        border: 1px solid $primary;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+      }
+    }
+    i {
+      color: $secondary;
+      position: absolute;
+      right: 18px;
+      top: 32%;
+      cursor: pointer;
+      &:hover {
+        transition: all 0.3s ease;
+        color: darken($secondary, 20%);
+      }
+    }
+  }
+  .allChatFriend {
+      
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .chatFriend {
+      
+      padding: $spaceM $spaceS;
+ display: grid;
+ grid-template-columns: 60px auto auto;
+ align-items: center;
+      .friendPhoto {
+        position: relative;
+        width: 60px;
+        img {
+          width: 60px;
+          height: 60px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+        .online {
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: $primary;
+          border: 2px solid white;
+          bottom: 3px;
+          right: 3px;
+        }
+      }
+
+      .chatFriendName {
+      
+        text-align: left;
+        margin-left: 10px;
+        h2 {
+          font-size: 0.9rem;
+        }
+        p {
+          color: $secondary;
+          font-size: 0.8rem;
+        }
+      }
+      .unreadMessages {
+        text-align: right;
+        .messagesCount {
+          display: inline-block;
+          margin: 0 auto;
+          text-align: center;
+          padding: 3px 4px;
+          border-radius: 50%;
+          background-color: $primary;
+          font-size: 12px;
+          color: white;
+        }
+        .time {
+          font-size: 0.6rem;
+          color: $secondary;
+        }
+      }
+    
+    }
+  }
+}
+
+
+
+@media (max-width: 640px) {
+    .sidebar{
+        width: 100vw;
+    }
+  }
