@@ -1,15 +1,15 @@
-import createUsers from "../scripts/createUsers.js";
-
+import users from "../scripts/createUsers.js";
 function showChatList() {
-  let users = createUsers().sort((a, b) => {
+  let friends = users.sort((a, b) => {
     return a.lastMessage[0] - b.lastMessage[0] && a.lastMessage[1] - b.lastMessage[1];
   });
 
   const allChatFriends = document.querySelector(".allChatFriends");
 
-  for (let item of users) {
+  for (let item of friends) {
     let div = document.createElement("div");
     div.className = "chatFriend";
+    div.setAttribute('profileID', item.id);
     div.innerHTML = `<div class="friendPhoto">
 <img src=${item.avatar} alt="">
 <div class="online"></div>

@@ -297,10 +297,14 @@ body {
       }
     }
     .icon {
+      width: 30px;
       display: inline-block;
       margin: 0 10px;
     }
   }
+}
+.clickUser{
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
 }
 
 @media (max-width: 640px) {

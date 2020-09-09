@@ -18,8 +18,10 @@ const names = [
   "Maya Didas",
 ];
 
-export default function createUsers() {
-  let users = [];
+let users = [];
+function createUsers() {
+
+  let id = 1;
 
   function randomDate(start, end) {
     let date = new Date(
@@ -39,10 +41,14 @@ export default function createUsers() {
       }/${names.indexOf(item)}.jpg`,
       messages: 5,
       lastMessage: randomDate(new Date(2020, 7, 0), new Date()),
+      id: id++,
     };
 
     users.push(obj);
   }
-  return users;
+  
 }
+createUsers();
+
+export default users; 
 
