@@ -25,8 +25,6 @@ export default function createUsers() {
     let date = new Date(
       start.getTime() + Math.random() * (end.getTime() - start.getTime())
     ).toString().split(' ');
-    // date = date.split(' ')
-   console.log(date)
     return [date[2], date[1]]
   }
 

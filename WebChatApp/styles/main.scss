@@ -34,7 +34,7 @@ body {
   display: flex;
 }
 .sidebar {
-  width: 280px;
+  width: 400px; //!!!!!!!!!!! 280px
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@ body {
     }
   }
   .currentUserInfo {
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     text-align: center;
     margin: 0 auto;
     padding: $spaceL;
@@ -71,7 +71,7 @@ body {
     top: -250px;
     z-index: 1;
     img {
-        object-fit: cover;
+      object-fit: cover;
       width: 70px;
       height: 70px;
       border-radius: 50%;
@@ -94,7 +94,6 @@ body {
     }
   }
   .findChatUser {
-
     width: 100%;
     padding: 0 7px;
     position: relative;
@@ -127,16 +126,14 @@ body {
     }
   }
   .allChatFriends {
-      
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     .chatFriend {
-      
       padding: $spaceM $spaceS;
- display: grid;
- grid-template-columns: 60px auto auto;
- align-items: center;
+      display: grid;
+      grid-template-columns: 60px auto auto;
+      align-items: center;
       .friendPhoto {
         position: relative;
         width: 60px;
@@ -159,7 +156,6 @@ body {
       }
 
       .chatFriendName {
-      
         text-align: left;
         margin-left: 10px;
         h2 {
@@ -174,7 +170,7 @@ body {
         text-align: right;
         .messagesCount {
           display: inline-block;
-        text-align: center;
+          text-align: center;
           width: 20px;
           height: 20px;
           border-radius: 50%;
@@ -182,42 +178,136 @@ body {
           font-size: 12px;
           color: white;
           vertical-align: middle;
-
         }
         .time {
           font-size: 0.6rem;
           color: $secondary;
         }
       }
-    &:hover{
-      cursor: pointer;
-      transition: all .4s ease;
-      background-color: lighten($primary, 40%);
-    }
+      &:hover {
+        cursor: pointer;
+        transition: all 0.4s ease;
+        background-color: lighten($primary, 40%);
+      }
     }
   }
 }
-.chatField{
+.preview {
   text-align: center;
   margin: 0 auto;
   align-self: center;
   width: 40%;
-  img{
-
+  img {
     object-fit: cover;
   }
-  h1{
+  h1 {
     color: $secondary;
     font-size: 1.7rem;
   }
 }
 
-
-@media (max-width: 640px) {
-    .sidebar{
-        width: 100vw;
-    }
-    .chatField{
-      display: none;
+.chatField {
+  background: no-repeat #3ad07a1f url("../static/chat-box-bg.png");
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .userInfo {
+    border-left: 1px solid #efefef;
+    padding: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+    .currentUserInfo {
+      display: flex;
+      align-items: center;
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      h2 {
+        margin-left: 10px;
+        font-size: 0.9rem;
+      }
     }
   }
+  .currentUserMessages {
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: $spaceS;
+    color: #fff;
+    .lastMessageDate {
+      justify-self: center;
+      margin: 0 auto;
+      text-align: center;
+      display: inline;
+      font-size: 14px;
+      padding: 0.5rem 1.5rem;
+      border-radius: 25px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .userMessage {
+      margin-top: $spaceM;
+      padding: $spaceM;
+      background-color: white;
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+      color: $danger;
+      border-radius: 20px;
+      align-self: flex-start;
+      width: 70%;
+    }
+    .myMessage {
+      margin-top: $spaceM;
+      padding: $spaceM;
+      background-color: $primary;
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+      border-radius: 25px;
+      align-self: flex-end;
+      width: 70%;
+    }
+  }
+  .newMessageInput {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+    padding: $spaceS;
+    textarea {
+      display: inline-block;
+      width: 100%;
+      border:2px solid #efefef;
+      outline: none;
+      border-radius: 5px;
+      padding: 5px;
+      &:hover{
+        transition:all .3s ease;
+        border:2px solid $primary;
+      }
+      &:focus{
+        border:2px solid $primary;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+      }
+    }
+    .icon {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    width: 100vw;
+  }
+  .chatField {
+    display: none;
+  }
+}

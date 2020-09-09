@@ -31,7 +31,7 @@ body {
 }
 
 .sidebar {
-  width: 280px;
+  width: 400px;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,8 +77,8 @@ body {
 }
 
 .sidebar .currentUserInfo {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   text-align: center;
   margin: 0 auto;
   padding: 20px;
@@ -237,12 +237,12 @@ body {
 
 .sidebar .allChatFriends .chatFriend:hover {
   cursor: pointer;
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   background-color: #dff7e9;
 }
 
-.chatField {
+.preview {
   text-align: center;
   margin: 0 auto;
   -ms-flex-item-align: center;
@@ -251,14 +251,160 @@ body {
   width: 40%;
 }
 
-.chatField img {
+.preview img {
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.chatField h1 {
+.preview h1 {
   color: rgba(97, 97, 97, 0.678);
   font-size: 1.7rem;
+}
+
+.chatField {
+  background: no-repeat #3ad07a1f url("../static/chat-box-bg.png");
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.chatField .userInfo {
+  border-left: 1px solid #efefef;
+  padding: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+}
+
+.chatField .userInfo .currentUserInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chatField .userInfo .currentUserInfo img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.chatField .userInfo .currentUserInfo h2 {
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+
+.chatField .currentUserMessages {
+  height: 100%;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  color: #fff;
+}
+
+.chatField .currentUserMessages .lastMessageDate {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 0 auto;
+  text-align: center;
+  display: inline;
+  font-size: 14px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.chatField .currentUserMessages .userMessage {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+  color: black;
+  border-radius: 20px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 70%;
+}
+
+.chatField .currentUserMessages .myMessage {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #3ad07a;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+  border-radius: 25px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 70%;
+}
+
+.chatField .newMessageInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+  padding: 10px;
+}
+
+.chatField .newMessageInput textarea {
+  display: inline-block;
+  width: 100%;
+  border: 2px solid #efefef;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.chatField .newMessageInput textarea:hover {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  border: 2px solid #3ad07a;
+}
+
+.chatField .newMessageInput textarea:focus {
+  border: 2px solid #3ad07a;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
+}
+
+.chatField .newMessageInput .icon {
+  display: inline-block;
+  margin: 0 10px;
 }
 
 @media (max-width: 640px) {

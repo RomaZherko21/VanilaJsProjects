@@ -17,6 +17,8 @@ showCurrentUserInfo.addEventListener("click", () => {
   }
 });
 
+
+
 //clear search input
 const clearSearchInput = document.querySelector("#clearSearchInput");
 const searchInput = document.querySelector("#searchInput");
@@ -24,3 +26,10 @@ const searchInput = document.querySelector("#searchInput");
 clearSearchInput.addEventListener("click", () => {
   if (searchInput.value) searchInput.value = "";
 });
+
+
+const allChatFriends = document.querySelector(".allChatFriends");
+allChatFriends.addEventListener('click',(event)=>{
+console.log(event.target.closest('.chatFriend'))
+
+})
