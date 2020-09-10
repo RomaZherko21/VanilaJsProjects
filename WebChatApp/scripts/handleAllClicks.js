@@ -1,17 +1,17 @@
 //on click show current user info (pop up)
 const showCurrentUserInfo = document.querySelector("#showCurrentUserInfo");
-const currentUserInfo = document.querySelector(".currentUserInfo");
+const myInfo = document.querySelector(".myInfo");
 let currentUserInfoShowCheck = false;
 
 showCurrentUserInfo.addEventListener("click", () => {
   if (!currentUserInfoShowCheck) {
-    currentUserInfo.style.top = "0";
-    currentUserInfo.style.position = "relative";
+    myInfo.style.top = "0";
+    myInfo.style.position = "relative";
     currentUserInfoShowCheck = !currentUserInfoShowCheck;
   } else {
-    currentUserInfo.style.top = "-250px";
+    myInfo.style.top = "-250px";
     setTimeout(() => {
-      currentUserInfo.style.position = "absolute";
+      myInfo.style.position = "absolute";
     }, 100);
     currentUserInfoShowCheck = !currentUserInfoShowCheck;
   }
@@ -30,8 +30,9 @@ clearSearchInput.addEventListener("click", () => {
 
 
 
-////////////////SHOW MESSAGE?????????/
+////////////////SHOW MESSAGE//////////
 import users from './createUsers.js'
+import showChatBox from '../components/showChatBox.js'
 const allChatFriends = document.querySelector(".allChatFriends");
 allChatFriends.addEventListener("click", (event) => {
 
@@ -39,17 +40,13 @@ allChatFriends.addEventListener("click", (event) => {
 
   if(allChatFriends.querySelector('.clickUser')) allChatFriends.querySelector('.clickUser').classList.remove('clickUser');
   chatFriend.classList.toggle('clickUser')
-
-  console.log(chatFriend.getAttribute('profileid'))
-  console.log(users)
-  users.find((item)=>{
-    if(item.id==chatFriend.getAttribute('profileid')) console.log(item)//////////////////////FOOOOOOOOoo
-  })
-// users.find()
   
+  users.find((item)=>{
+    if(item.id==chatFriend.getAttribute('profileid')) showChatBox(item)
+  })
 
-  console.log();
   messageHandler();
+  keyHandler();
 });
 
 
@@ -60,22 +57,34 @@ allChatFriends.addEventListener("click", (event) => {
 ///////send a message
 import {showMyMessage} from "../components/createMessage.js"
 function messageHandler() {
-
-  const messageArea = document.querySelector("#messageArea");
   const micro = document.querySelector("#micro");
+  const messageArea = document.querySelector("#messageArea");
   
   messageArea.addEventListener("input", (event) => {
     if (event.target.value !== "") {
       micro.innerHTML = '<i class="fas fa-paper-plane"></i>';
       const send = document.querySelector(".fa-paper-plane");
-      send.addEventListener('click',()=>{
-      if(messageArea.value!=='')showMyMessage(messageArea.value) ////SEND a message to a func
-      messageArea.value = '';
-      })
-    } else {
+      
+      
+      if(messageArea.value!=='') send.addEventListener('click',()=>{
+        showMyMessage(messageArea.value) ////SEND a message to a func
+        messageArea.value = '';
       micro.innerHTML = '<i class="fas fa-microphone"></i>';
-    }
-  });
+    })
+    
+    
+  } else {
+    micro.innerHTML = '<i class="fas fa-microphone"></i>';
+  }
+});
 }
 
-// messageHandler();
+function keyHandler(){
+const messageArea = document.querySelector("#messageArea");
+document.addEventListener('keyup',(event)=>{
+  if (event.code == 'Enter' && messageArea.value!=='') {
+    showMyMessage(messageArea.value)
+    messageArea.value = '';
+  }
+})
+}
