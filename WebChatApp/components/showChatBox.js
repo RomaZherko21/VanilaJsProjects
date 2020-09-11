@@ -1,3 +1,5 @@
+import {showUserMessage} from './createMessage.js'
+
 let section = document.createElement("section");
 section.className = "chatField";
 
@@ -26,7 +28,7 @@ export default function showChatBox(user) {
             </div>
     </div>
             <div class="newMessageInput" >
-                <textarea id="messageArea" placeholder="Write message here!"></textarea>
+                <input id="messageArea" placeholder="Write message here!"></input>
                 <div id="micro" class="icon">
                     <i class="fas fa-microphone"></i>
                 </div>
@@ -50,4 +52,5 @@ export default function showChatBox(user) {
       const allChatFriends = document.querySelector(".allChatFriends");
       if(allChatFriends.querySelector('.clickUser')) allChatFriends.querySelector('.clickUser').classList.remove('clickUser');
   }
+  showUserMessage(user.messages);
 }

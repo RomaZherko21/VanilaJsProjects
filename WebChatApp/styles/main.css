@@ -320,6 +320,7 @@ body {
 
 .chatField .currentUserMessages {
   height: 100%;
+  overflow: hidden;
   overflow-y: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -355,8 +356,9 @@ body {
   -ms-flex-item-align: start;
       align-self: flex-start;
   width: auto;
-  overflow: hidden;
+  content: '';
   max-width: 70%;
+  height: auto;
 }
 
 .chatField .currentUserMessages .myMessage {
@@ -365,13 +367,13 @@ body {
   background-color: #3ad07a;
   -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
           box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
-  border-radius: 25px;
+  border-radius: 20px;
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: auto;
-  overflow: hidden;
+  content: '';
   max-width: 70%;
-  min-height: 40px;
+  height: auto;
 }
 
 .chatField .newMessageInput {
@@ -387,7 +389,7 @@ body {
   padding: 10px;
 }
 
-.chatField .newMessageInput textarea {
+.chatField .newMessageInput input {
   display: inline-block;
   width: 100%;
   border: 2px solid #efefef;
@@ -396,13 +398,13 @@ body {
   padding: 5px;
 }
 
-.chatField .newMessageInput textarea:hover {
+.chatField .newMessageInput input:hover {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   border: 2px solid #3ad07a;
 }
 
-.chatField .newMessageInput textarea:focus {
+.chatField .newMessageInput input:focus {
   border: 2px solid #3ad07a;
   -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
           box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);

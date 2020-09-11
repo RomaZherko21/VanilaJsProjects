@@ -39,7 +39,7 @@ function createUsers() {
       avatar: `https://randomuser.me/api/portraits/${
         Math.round(Math.random()) ? "men" : "women"
       }/${names.indexOf(item)}.jpg`,
-      messages: 5,
+      messages: Math.round(Math.random()*10),
       lastMessage: randomDate(new Date(2020, 7, 0), new Date()),
       id: id++,
     };

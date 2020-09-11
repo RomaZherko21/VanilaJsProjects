@@ -241,6 +241,7 @@ body {
   }
   .currentUserMessages {
     height: 100%;
+    overflow: hidden;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
@@ -264,21 +265,27 @@ body {
       color: $danger;
       border-radius: 20px;
       align-self: flex-start;
+
+
       width: auto;
-      overflow: hidden;
+      content: '';
       max-width: 70%;
+      height: auto;
+      
+   
     }
     .myMessage {
       margin-top: $spaceM;
       padding: $spaceM;
       background-color: $primary;
       box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
-      border-radius: 25px;
+      border-radius: 20px;
       align-self: flex-end;
+
       width: auto;
-      overflow: hidden;
+      content: '';
       max-width: 70%;
-      min-height: 40px;
+      height: auto;
     }
   }
   .newMessageInput {
@@ -287,7 +294,7 @@ body {
     background-color: #fff;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.14);
     padding: $spaceS;
-    textarea {
+    input {
       display: inline-block;
       width: 100%;
       border:2px solid #efefef;
