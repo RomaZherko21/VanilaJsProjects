@@ -65,7 +65,6 @@ function keyHandler() {
 
   document.addEventListener("keydown", (event) => {
     pressed.add(event.code);
-    console.log(pressed)
     if (pressed.has("Enter") && pressed.has("ShiftLeft")) {
       console.log("enr");
     } else if (pressed.has("Enter") && messageArea.value !== "") {
