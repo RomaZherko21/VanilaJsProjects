@@ -62,6 +62,9 @@ class Li {
     check.className = "fas fa-check";
     this.complete = this.complete.bind(this);
     check.addEventListener("click", this.complete);
+    //add green color if task have been completed
+    let item = JSON.parse(localStorage.getItem(this.value));
+    if(item.complete) check.style.color = 'green';
 
     let div = document.createElement("div");
     div.className = "listIcons";
@@ -85,3 +88,13 @@ window.onload = function () {
 
   }
 };
+
+// function showCompletedTasks(){
+//   for (let key in localStorage) {
+//     if (!localStorage.hasOwnProperty(key)) {
+//       continue;
+//     }
+
+
+//   }
+// }
