@@ -5,38 +5,46 @@
 }
 
 .mainApp{
-    width: 350px;
     margin: 0 auto;
-    border: 2px solid orange;
     height: 200px;
-    background-color: rgb(251, 255, 0);
+    background-color: rgb(251, 215, 31);
     text-align: center;
-    margin-top: 30px;
-    border-radius: 10px;
 }
 h1{
     padding: 10px 0px 40px;
     font-size: 2rem;
     font-weight: 300;
-    color: black;
+    color: white;
 }
 
 input{
 width: 60%;
 height: 30px;
-background-color: rgba(56, 8, 230, 0.2);
-border: none;
+background-color: rgb(251, 215, 31);
+border: 2px solid black;
+border-radius: 30px;
+outline: none;
+padding-left: 10px;
 
 }
 
 select{
     height: 30px;
-    border: none;
-    background-color: rgba(56, 8, 230, 0.2);
+    background-color:black;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    color: white;
 }
 
 .outputInfo{
 margin-top: 20px;
 font-weight: 300;
 font-size: 16px;
+color: white;
+background-color: black;
+display: inline-block;
+width: auto;
+padding: 10px;
+border-radius: 30px;
 }

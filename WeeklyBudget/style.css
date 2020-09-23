@@ -76,6 +76,12 @@ body {
   margin: 12px;
 }
 
+.mainApp .mainForm .error {
+  color: red;
+  margin: 0;
+  padding: 0;
+}
+
 .mainApp .mainForm form .mainLabel {
   margin: 5px 10px;
   font-size: 1rem;
@@ -136,9 +142,23 @@ body {
   margin-bottom: 10px;
 }
 
+.mainApp .mainInfo .mainExpenses .mainTitle {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.mainApp .mainInfo .mainExpenses .currentExpenses {
+  list-style-type: none;
+  font-size: 40px;
+  font-style: italic;
+  width: 95%;
+}
+
 .mainApp .mainInfo .mainExpenses .currentExpenses li {
   list-style-position: inside;
   margin-left: 14px;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
 }
 
 @media (max-width: 1024px) {

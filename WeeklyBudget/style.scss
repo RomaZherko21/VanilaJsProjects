@@ -20,6 +20,7 @@ body {
   margin: $childSpace;
   font-size: 1.3rem;
   font-weight: 400;
+  
 }
 
 .appTitle {
@@ -70,6 +71,12 @@ body {
 
   .mainForm {
     margin: $childSpace;
+    .error{
+      color: red;
+      margin: 0;
+      padding: 0;
+      
+    }
     form {
       .mainLabel {
         margin: $formSpace 10px;
@@ -127,10 +134,21 @@ body {
       margin-bottom: 10px;
     }
     .mainExpenses {
+      .mainTitle{
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
       .currentExpenses{
+        list-style-type: none;
+        font-size: 40px;
+        font-style: italic;
+        width: 95%;
         li{
           list-style-position:inside;
           margin-left: 14px;
+          font-size: 18px;
+          border-bottom: 1px solid #ccc;
+
         }
 
       }

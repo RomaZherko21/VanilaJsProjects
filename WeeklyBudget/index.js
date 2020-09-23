@@ -1,12 +1,10 @@
-let budgetBlock = document.querySelector(".weeklyBudgetAmmount");
-
-let budget = document.querySelector("#budget");
-let balance = document.querySelector("#balance");
+const budgetBlock = document.querySelector(".weeklyBudgetAmmount");
+const budget = document.querySelector("#budget");
+const balance = document.querySelector("#balance");
 
 budgetBlock.children[1].addEventListener("click", () => {
   if (
-    +budgetBlock.children[0].value > 0 &&
-    +budgetBlock.children[0].value < 10e10
+    /^\d{1,10}$/g.test(budgetBlock.children[0].value)
   ) {
     budget.append(+budgetBlock.children[0].value);
     balance.append(+budgetBlock.children[0].value);
@@ -17,13 +15,12 @@ budgetBlock.children[1].addEventListener("click", () => {
 const add = document.querySelector("#addBtn");
 const name = document.querySelector("#name");
 const price = document.querySelector("#ammount");
+const ul = document.querySelector(".currentExpenses");
 
 add.addEventListener("click", (event) => {
   if (
     name.value &&
-    +price.value > 0 &&
-    +price.value.length < 10 &&
-    !isNaN(price.value) &&
+   /^\d{1,10}$/g.test(price.value) &&
     budget.textContent !== ""
   ) {
     makeLi(name.value, price.value);
@@ -34,11 +31,9 @@ add.addEventListener("click", (event) => {
   }
 });
 
-const ul = document.querySelector(".currentExpenses");
-
 function makeLi(name, price) {
   let li = document.createElement("li");
-  li.innerHTML = `${name}: ${price}`;
+  li.innerHTML = `${name}:  $${price}`;
   ul.append(li);
 }
 

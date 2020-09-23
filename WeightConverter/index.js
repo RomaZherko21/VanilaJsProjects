@@ -7,8 +7,6 @@ select.addEventListener("click", () => converter(input.value, select.value));
 
 function converter(value, measure) {
     if (measure == "kg") output.innerHTML = `${(value * 2.2).toFixed(2)} pounds`;
-    if (measure == "pounds")
-    output.innerHTML = `${(value / 2.2).toFixed(2)} killogramms`;
-    console.log()
+    if (measure == "pounds") output.innerHTML = `${(value / 2.2).toFixed(2)} killogramms`;
     if (isNaN(+value)) output.innerHTML = `Need a number!`;
 }
