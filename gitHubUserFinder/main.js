@@ -7,10 +7,10 @@ function changeInfo(data) {
   let img = document.querySelector(".userPhoto");
   let userInfo = document.querySelector("#userInfo");
 
-  userInfo.innerHTML = `<li>Name: ${data.name}</li>
-  <li>Bio: ${data.bio}</li>
-  <li>Location: ${data.location}</li>
-  <li>Company: ${data.company}</li>`;
+  userInfo.innerHTML = `<li><span>Name:</span> ${data.name}</li>
+  <li><span>Bio:</span> ${data.bio}</li>
+  <li><span>Location:</span> ${data.location}</li>
+  <li><span>Company:</span> ${data.company}</li>`;
 
   img.innerHTML = `<img src="${data.avatar_url}">`;
 }
@@ -36,8 +36,6 @@ let user = new GitHub();
 
 userName.addEventListener("keyup", (event) => {
   currentUser = user.getUser(event.target.value);
-  console.log(currentUser);
-
   if (currentUser) {
     currentUser.then((data) => {
       if (data.profile.message == "Not Found") {

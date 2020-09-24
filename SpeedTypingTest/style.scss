@@ -38,7 +38,7 @@ main {
 
       background-color: $dangerColor;
       color: white;
-      padding: 3px;
+      padding: 3px 6px;
       width: 100px;
       border: none;
       font-size: 14px;
@@ -46,6 +46,7 @@ main {
       -webkit-appearance: button;
       appearance: button;
       outline: none;
+      width: 80px;
     }
     .startBtn {
       margin-left: 10px;
@@ -92,6 +93,9 @@ main {
 
 @media (max-width: 900px) {
   main {
+    .word{
+      font-size: 2rem;
+    }
     .difficulty {
       display: grid;
       grid-row: repeate(3,1fr);
@@ -99,7 +103,13 @@ main {
       .selectDifficulty{
         margin: 10px;
       }
+      
     }
-
+    .wordInput{
+      width: 95%;
+    }
+    .instructions{
+      width: 95%;
+    }
   }
 }

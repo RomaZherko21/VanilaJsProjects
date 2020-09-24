@@ -89,12 +89,3 @@ window.onload = function () {
   }
 };
 
-// function showCompletedTasks(){
-//   for (let key in localStorage) {
-//     if (!localStorage.hasOwnProperty(key)) {
-//       continue;
-//     }
-
-
-//   }
-// }

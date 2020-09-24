@@ -12,10 +12,13 @@ $primary: #11998e;
 $secondary: #38ef7d;
 $white: #fff;
 $gray: #9b9b9b;
-
+body{
+  overflow-y: scroll;
+}
 main {
   padding: $littleSpace;
   margin: $mainSpace auto;
+  
   h1 {
     font-size: 3rem;
     text-align: center;

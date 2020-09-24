@@ -50,6 +50,15 @@ const answers = document.querySelector("#answers");
 let count = -1;
 let score = 0;
 
+
+function init() {
+  makeQuestionListeners();
+  makeNewQuestions();
+}
+
+window.onload = init;
+
+
 function makeQuestionListeners() {
   for (let div of answers.children) {
     div.addEventListener("click", () => {
@@ -77,9 +86,4 @@ function makeScore() {
   correct.innerHTML = `Your score: ${score}/${keys.length}`;
 }
 
-function init() {
-  makeQuestionListeners();
-  makeNewQuestions();
-}
 
-window.onload = init;

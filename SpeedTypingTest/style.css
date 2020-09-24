@@ -40,7 +40,7 @@ main .difficulty .selectDifficulty {
   margin-left: 10px;
   background-color: #17a2b8;
   color: white;
-  padding: 3px;
+  padding: 3px 6px;
   width: 100px;
   border: none;
   font-size: 14px;
@@ -50,6 +50,7 @@ main .difficulty .selectDifficulty {
   -moz-appearance: button;
        appearance: button;
   outline: none;
+  width: 80px;
 }
 
 main .difficulty .startBtn {
@@ -100,6 +101,9 @@ main .instructions {
 }
 
 @media (max-width: 900px) {
+  main .word {
+    font-size: 2rem;
+  }
   main .difficulty {
     display: -ms-grid;
     display: grid;
@@ -110,6 +114,12 @@ main .instructions {
   }
   main .difficulty .selectDifficulty {
     margin: 10px;
+  }
+  main .wordInput {
+    width: 95%;
+  }
+  main .instructions {
+    width: 95%;
   }
 }
 /*# sourceMappingURL=style.css.map */

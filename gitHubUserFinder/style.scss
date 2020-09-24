@@ -16,10 +16,8 @@ $gray: #9b9b9b;
 header {
   font-family: "Poppins", sans-serif;
   display: flex;
-  // flex-direction: column;
   justify-content: center;
   align-items: center;
-  // min-height: 30vh;
   padding: 20px;
   font-size: 1.5rem;
   background-color: #222222;
@@ -95,14 +93,12 @@ header {
 
 .showUser {
   padding: $littleSpace;
-  background: rgb(238, 238, 238);
-  border-radius: 5px;
+  background-color: rgb(107, 107, 107);
   box-shadow: 1px 1px 2px lightgrey;
-  margin: $littleSpace auto;
-  width: 300px;
-
+  text-align: center;
+  width: auto;
+color:white;
   display: flex;
-  
   .userPhoto {
     margin: 0 auto;
     img {
@@ -119,4 +115,8 @@ header {
       }
     }
   }
+}
+span{
+  color: #222222;
+  font-weight: bold;
 }

@@ -12,6 +12,7 @@ body {
   text-align: center;
 }
 main {
+  height: 100vh;
   background: linear-gradient(to right, #7bc6cc, #be93c5);
   padding: $mainSpace 0;
   h1 {
